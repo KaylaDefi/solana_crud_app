@@ -1,13 +1,12 @@
 # crud-app
 
-This project is a preview. Please give feedback to [beeman](https://x.com/beeman_nl) on X.
+This project is a preview.
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node v18.18.0 or higher
-
 - Rust v1.77.2 or higher
 - Anchor CLI 0.30.1 or higher
 - Solana CLI 1.18.17 or higher
