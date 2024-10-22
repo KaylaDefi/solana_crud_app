@@ -16,11 +16,15 @@ export default function CrudappFeature() {
       <AppHero
         title="Crudapp"
         subtitle={
-          'Create a new account by clicking the "Create" button. The state of a account is stored on-chain and can be manipulated by calling the program\'s methods (increment, decrement, set, and close).'
+          'Create a new account by clicking the "Create" button. The state of a account is stored on-chain and can be manipulated by calling the program\'s methods (create, update, delete).'
         }
       >
         <p className="mb-6">
-          <ExplorerLink path={`account/${programId}`} label={ellipsify(programId.toString())} />
+          {programId ? (
+            <ExplorerLink path={`account/${programId}`} label={ellipsify(programId.toString())} />
+          ) : (
+            <span>Program ID not available</span>
+          )}
         </p>
         <CrudappCreate />
       </AppHero>
