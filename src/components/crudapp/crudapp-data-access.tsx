@@ -21,8 +21,8 @@ export function useCrudappProgram() {
   const { cluster } = useCluster()
   const transactionToast = useTransactionToast()
   const provider = useAnchorProvider()
-
-  const programId = useMemo(() => getCrudappProgramId(cluster.network as Cluster), [cluster])
+  const programId = useMemo(
+    () => getCrudappProgramId(cluster.network as Cluster), [cluster])
   const program = useMemo(() => getCrudappProgram(provider), [provider])
 
   const accounts = useQuery({
